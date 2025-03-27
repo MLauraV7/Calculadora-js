@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="calculadora">
+        <input type="text" id="resultado" disabled>
+        <div class="botones">
+            <button onclick="agregarAlCalculo('1')">1</button>
+            <button onclick="agregarAlCalculo('2')">2</button>
+            <button onclick="agregarAlCalculo('3')">3</button>
+            <button onclick="agregarAlCalculo('+')">+</button>
+
+            <button onclick="agregarAlCalculo('4')">4</button>
+            <button onclick="agregarAlCalculo('5')">5</button>
+            <button onclick="agregarAlCalculo('6')">6</button>
+            <button onclick="agregarAlCalculo('-')">-</button>
+
+            <button onclick="agregarAlCalculo('7')">7</button>
+            <button onclick="agregarAlCalculo('8')">8</button>
+            <button onclick="agregarAlCalculo('9')">9</button>
+            <button onclick="agregarAlCalculo('*')">*</button>
+
+            <button onclick="agregarAlCalculo('0')">0</button>
+            <button onclick="limpiarResultado()">C</button>
+            <button onclick="calcularResultado()">=</button>
+            <button onclick="agregarAlCalculo('/')">/</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
+
