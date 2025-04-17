@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Calculadora</title>
 </head>
 <body>
     <div class="calculadora">
+        <p id="bienvenida"></p>
         <input type="text" id="resultado" disabled>
         <div class="botones">
             <button onclick="agregarAlCalculo('1')">1</button>
@@ -30,8 +31,10 @@
             <button onclick="calcularResultado()">=</button>
             <button onclick="agregarAlCalculo('/')">/</button>
         </div>
+        <button class="historial-btn" onclick="mostrarHistorial()">Ver Historial</button>
+        <div id="historial"></div>
+        <button class="borrar-historial-btn" onclick="borrarHistorial()">Borrar Historial</button>
     </div>
-    <script src="./script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
-
