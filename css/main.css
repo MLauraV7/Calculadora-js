@@ -4,90 +4,106 @@
     box-sizing: border-box;
 } 
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f3f3f3;
+    background-color: #282c34;
+    color: #eee;
 }
-p {
+#aplicacion {
+    background-color: #1e1e1e;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    width: 360px;
     display: flex;
-    justify-content: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 10px;
-    color: antiquewhite;
+    flex-direction: column;
+    align-items: center;
 }
-h3 {
-    display: flex;
-    justify-content: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 10px;
-    color: antiquewhite;
-}
-.calculadora {
-    background-color: #000000c3;
-    background: linear-gradient(63deg, rgb(25, 67, 101), rgb(35, 84, 124) 50%, rgb(34, 105, 180));
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.342);
-    width: 300px;
-}
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 24px;
-    text-align: right;
+#bienvenida {
+    font-size: 1.2rem;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    color: #000000;
-    background-color:  #f0f0f0;
+    font-weight: 600;
+    text-align: center;
 }
-.botones {
+#resultado {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.6rem;
+    text-align: right;
+    border-radius: 10px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    user-select: none;
+    margin-bottom: 25px;
+}
+#botones {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 25px;
 }
-button {
-    padding: 20px;
-    font-size: 18px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+#botones button {
+    aspect-ratio: 1 / 1;
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 10px;
+    color: #eee;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.15s;
+}
+#botones button:hover {
+    background-color: #555;
+}
+#botones button:active {
+    transform: scale(0.92);
+}
+#historial {
+    background-color: #595656;
+    color: #ddd;
+    font-family: monospace;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+#historial h3 {
+    margin-bottom: 10px;
+}
+#aplicacion > button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    background-color: #c28006;
+    color: #f0e68c;
     cursor: pointer;
     transition: background-color 0.3s;
 }
-button:hover {
-    background-color: #ddd;
+#aplicacion > button:hover {
+    background-color: #a06a04;
 }
-button:active {
-    background-color: #ccc;
+#aplicacion > button:active {
+    transform: scale(0.95);
 }
-.historial-btn, .borrar-historial-btn{
+.mensaje-error {
     margin-top: 15px;
-    width: 100%;
-    padding: 12px;
-    background-color: #83abc8;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-}
-.historial-btn:hover {
-    background-color: #000000;
-}
-.historial {
-    margin-top: 20px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 6px;
-    max-height: 200px;
-    overflow-y: auto;
-    font-family: monospace;
-}
-.borrar-historial-btn:hover{
-    background-color: #000000;
+    color: #f96060;
+    font-weight: 700;
+    text-align: center;
 }

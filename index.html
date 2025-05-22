@@ -3,38 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Calculadora</title>
 </head>
 <body>
-    <div class="calculadora">
-        <p id="bienvenida"></p>
+    <div id= "aplicacion">
+        <div id="bienvenida"></div>
         <input type="text" id="resultado" disabled>
-        <div class="botones">
-            <button onclick="agregarAlCalculo('1')">1</button>
-            <button onclick="agregarAlCalculo('2')">2</button>
-            <button onclick="agregarAlCalculo('3')">3</button>
-            <button onclick="agregarAlCalculo('+')">+</button>
-
-            <button onclick="agregarAlCalculo('4')">4</button>
-            <button onclick="agregarAlCalculo('5')">5</button>
-            <button onclick="agregarAlCalculo('6')">6</button>
-            <button onclick="agregarAlCalculo('-')">-</button>
-
-            <button onclick="agregarAlCalculo('7')">7</button>
-            <button onclick="agregarAlCalculo('8')">8</button>
-            <button onclick="agregarAlCalculo('9')">9</button>
-            <button onclick="agregarAlCalculo('*')">*</button>
-
-            <button onclick="agregarAlCalculo('0')">0</button>
-            <button onclick="limpiarResultado()">C</button>
-            <button onclick="calcularResultado()">=</button>
-            <button onclick="agregarAlCalculo('/')">/</button>
-        </div>
-        <button class="historial-btn" onclick="mostrarHistorial()">Ver Historial</button>
+        <div id="botones"></div>
         <div id="historial"></div>
-        <button class="borrar-historial-btn" onclick="borrarHistorial()">Borrar Historial</button>
+        <button onclick="borrarHistorial()">Borrar Historial</button>
     </div>
-    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
